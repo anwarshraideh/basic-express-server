@@ -11,7 +11,7 @@ describe('Validator Middleware ', () => {
     
   });
 
-  it('Person Route', async () => {
+  it('Person Route with query', async () => {
     const response = await request.get('/person?name=anwar');
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('anwar');

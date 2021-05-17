@@ -14,7 +14,7 @@ describe('Logger Middleware', () => {
     consoleSpy.mockRestore();
   });
 
-  it('logs output correctly', () => {
+  it('should log all get requests', () => {
     logger(req, res, next);
     expect(consoleSpy).toHaveBeenCalled();
     expect(next).toHaveBeenCalledWith();
