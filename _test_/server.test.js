@@ -8,7 +8,7 @@ describe('Server', () => {
   it('should get a welcome message', async () => {
     const response = await request.get('/');
     expect(response.status).toEqual(200);
-    expect(response.text).toEqual('Hello World');
+    expect(response.text).toEqual('Hello and welcom to my server');
   });
   test('handle invalid routes', async () => {
     const response = await request.get('/foo');
@@ -16,3 +16,4 @@ describe('Server', () => {
   });
   
 });
+
